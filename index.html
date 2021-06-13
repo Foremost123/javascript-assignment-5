@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 5</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <button id="start" onclick="funct(event)">Start</button>
+    <button id="stop" onclick="funct(event)">Stop</button>
+    <button id="clear" onclick="funct(event)">Clear</button>
+    <h1>0</h1>
+    <script>
+        function funct(event){
+            
+            if (event.target.id=="start"){
+                i=0
+                var timerId=window.setInterval(() => {
+                    var Elem=document.getElementsByTagName("h1")
+                    Elem[0].innerHTML=i+1
+                }, 1000); 
+            }
+            if (event.target.id=="stop"){
+                window.clearInterval(timerId);
+            }
+            if (event.target.id=="clear"){
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
